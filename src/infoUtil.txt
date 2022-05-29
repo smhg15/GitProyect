@@ -1,0 +1,28 @@
+PROPSTYPES
+
+En el componente.js se definen los propstypes que debe recibir los props que se le pasen
+
+Se establecen así
+
+Componente.propsTypes ={
+    props: Proptypes.Requerimento
+}
+
+Requerimentos (entre otros)
+
+  PropTypes.any.isRequired,
+  PropTypes.string, 
+  PropTypes.number.isRequired,
+  PropTypes.array, 
+  PropTypes.arrayOf(PropTypes.number), 
+  PropTypes.arrayOf(PropTypes.array),
+  PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  PropTypes.oneOf(['Loading', 'Ready']),
+  PropTypes.element,
+    // shape solo indica lo que si o si debe tener, pero si hay algo extra no salta. Para eso se usa "exact"
+  PropTypes.shape({
+        PropTypes.string,  
+        PropTypes.array,
+    }),
+   PropTypes.node //node se usa para algo que se pueda renderizar (x ej no un objeto)
+};
